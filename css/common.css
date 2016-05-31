@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除默认样式*/
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,input,textarea,th,td{margin:0;padding:0;border:0;line-height:100%}
+body{font:12px/1.5 tahoma,arial,'Microsoft Yahei';color:#444;background:#FFF; line-height:100%}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+h2{ font-size:18px;}
+h3{ font-size:16px;}
+li{list-style:none;}
+table{border-collapse:collapse; border-spacing:0;}
+textarea{resize:none;}
+input{outline:none; border:none; }
+i,em{ font-style: normal;line-height:100%}
+b,strong{font-weight:normal;line-height:100%}
+input::-ms-clear{display:none;}
+img{border:0 none;}
+li{cursor:pointer;}
+
+/*清除浮动*/
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+
+/*浮动*/
+.fl{float:left;}
+.fr{float:right;}
+
+/*通用样式开始*/
+.comWidth{width:1170px; margin:0 auto;}
+

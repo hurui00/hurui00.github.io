@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrapBox{ width:100%; position:absolute;top:0;left:0;}
+.wrapBox .nav{ height:76px; width:100%; background:#424d54; position:relative;}
+.nav .icon_l{ width:138px; height:23px; background:url(../img/icon.png) no-repeat;
+position:absolute;top:28px; left:180px;}
+#nav{ position:relative;}
+#nav li.box{ position:absolute;left:0;top:0; border:1px solid #06F; z-index:1;}
+#header_hide{ display:none;}
+.ul1{ margin-top:20px; margin-right:100px;}
+.ul1 li{ color:#FFF; float:left; width:50px; height:36px; text-align:center; line-height:36px; padding:0 12px;}
+.ul1 li.active_write{ color:#06F;}
+.tab ul { width:100%; height:100%; position:relative;}
+#lf,#rt{ width:60px; height:60px; opacity:.6;}
+#lf{ position:absolute; top:320px; left:10px; z-index:1;background:url(../img/left.png) no-repeat;}
+#rt{ position:absolute; top:320px; right:10px;background:url(../img/right.png) no-repeat;}
+#radius{ position:absolute; top:640px; left:50%; z-index:10; margin-left:-32px;}
+#radius a{ display:block; width:14px; height:14px; background:#000; float:left; 
+margin-right:10px; opacity:.4;filter:alpha(opacity:40);}
+#radius a.active{ background:#fff;}
+.tab ul li{width:100%; height:100%; display:none;}
+.tab ul li img{width:100%; height:590px;}
+.tab ul li div.web{ margin-left:-140px; margin-top:-140px; width:280px; height:280px; background:#000; opacity:0.5; border-radius:6px; position:absolute;top:50%; left:50%;}
+.tab ul li div.web span{ display:block; width:200px; height:2px; background:green; margin:2px 40px;}
+.line{ margin-top:30px;}
+#ul1 li{ position:relative; overflow:hidden;}
+#ul1 li span{ position:absolute;left:-210px;top:0;width:100%; height:100%; background:pink; }
+.produce{ text-align:center; margin:14px 0; font:40px Arial bold; color:yellow;}
+.mpc{ text-align:center; width:200px; line-height:1.5; margin-top:18px; margin-left:40px; color:#fff;}
+.btn{ width:200px; height:36px; line-height:36px; text-align:center; border:1px solid #0F9;
+ margin-top:18px; margin-left:40px;}
+ .eng{ width:800px; position:absolute; left:50%; margin-left:-400px; text-align:center; font:40px bold; color:#fff; top:470px;}
+ .bar_btm{ height:2px; width:30px; background:#ccc; display:block; margin-top:4px;}
+ .bar_left{ margin-top:48px; margin-left:210px;}
+ #eft .eft{position:relative;overflow:hidden;transition:all .6s ease;}
+  #eft .eft span{transition:all .6s ease;bottom:-60px; position:absolute;width:100%; height:60px; background:#95816f; }
+ #eft .eft:hover{box-shadow: 0 0 40px 10px #999; transform:translate(0,-10px); transition:all .5s}
+ #eft .eft h2{  margin-top:110px; color:#333; opacity:0; z-index:1000; position:absolute; bottom:20px; left:82px;}
+ #eft .eft:hover span{bottom:0;}
+  .list{ width:1000px; margin-left:200px; margin-top:40px;}
+ .list li{ margin:10px 10px; width:210px; height:210px; float:left; background:url(../img/bian.png) no-repeat; text-align:center;}
+ .list li h3{ margin:32px 0; font:28px "黑体"; font-size:2em;}
+ .list li p{ margin:2px 0; font:14px "黑体"; }
+ .portrait{ width:120px; height:120px; border-radius:50%; background:url(../img/mt.png) no-repeat; margin-right:48px; margin-left:210px; margin-top:60px; border:1px solid #ccc;}
+ .portrait:hover{ transform:rotate(360deg); transition:all 1s;}
+ .about{ width:100%; height:470px; background:url(../img/bg.png) no-repeat;}
+ .about .s1{ display:block; height:42px; width:78px; border:1px solid #FF0; float:left; margin-right:24px;}
+ .jx1 .s1{ margin-left:37px; margin-bottom:12px;}
+ /*.jx1 .s1:hover{transform:scale(0.8);  background:#9CF;transition:all 1s;}*/
+ /*.jx2 .s1:hover{transform:scale(0.8);  background:#9CF;transition:all 1s;}*/
+.jieshao{ padding:10px; width:360px; height:280px; border: 1px solid #ccc; border-radius:4px; margin-top:68px; margin-right:210px;}
+#jieshao span{ font:24px "宋体"; color:#fff; opacity:0;filter:alpha(opacity:0);}
+.jx1,.jx2{ position:relative; margin-left:210px; margin-top:64px; text-align:center; line-height:42px; color:#0FF;}
+.list .eft{ background:url(../img/js.png) no-repeat;}
+.contact{ background:url(../img/bg3.png) no-repeat;}
+.contact .em img{ margin-left:210px; margin-top:20px; margin-bottom:20px;}
+.contact .myself{ margin:20px 60px;}
+.contact .myself .qq{ margin:8px 0;}
