@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>屏保</title>
+<style>
+*{margin:0;padding:0;}
+html{ overflow:hidden;}
+body{ background:#000;}
+#c1{ background:#000;}
+</style>
+<script>
+
+function rnd(n,m){
+	return Math.floor(Math.random()*(m-n) + n);
+}
+window.onload = function(){
+	var oC = document.getElementById("c1");
+	var gd = oC.getContext("2d");
+	
+	var winW = innerWidth;
+	var winH = innerHeight;
+	
+	oC.width = winW;
+	oC.height = winH;
+	
+	//初始化点的信息
+	var N = 5;
+	var aPoint = [];
+	// 大小 位置 速度 {w/h   x/y  speedX/Y}
+	for(var i = 0; i < N; i++){
+		aPoint[i] = {
+			w:1,
+			h:1,
+			x:rnd(0,winW),
+			y:rnd(0,winH),
+			speedX:rnd(-10,10),
+			speedY:rnd(-10,10)
+		};	
+	}
+	
+	//老的点信息
+	var oldPoint = [];//[[平面1 [{点x,y}{点x,y}{点x,y}..]],[平面2],[平面3]....]
+	
+	setInterval(function(){
+		gd.clearRect(0,0,winW,winH);
+		//画点
+		for(var i = 0; i < N; i++){
+			drawPoint(aPoint[i]);
+			
+			aPoint[i].x += aPoint[i].speedX;
+			aPoint[i].y += aPoint[i].speedY;
+			
+			
+			if(aPoint[i].x <= 0){
+				aPoint[i].speedX *= -1;
+			} else if(aPoint[i].x >= winW){
+				aPoint[i].speedX *= -1;
+			}
+			
+			if(aPoint[i].y <= 0){
+				aPoint[i].speedY *= -1;
+			} else if(aPoint[i].y >= winH){
+				aPoint[i].speedY *= -1;
+			}
+		}
+		
+		//连线
+		gd.beginPath();
+		gd.moveTo(aPoint[0].x,aPoint[0].y);
+		for(var i = 1; i < N; i++){
+			gd.lineTo(aPoint[i].x,aPoint[i].y);
+		}
+		gd.closePath();
+		gd.stroke();
+		
+		//存轨迹
+		var arr = [];
+		for(var i = 0; i < N; i++){
+			arr.push({x:aPoint[i].x,y:aPoint[i].y});
+		}
+		
+		oldPoint.push(arr);
+		
+		//限定范围  10
+		while(oldPoint.length > 20){
+			oldPoint.shift();
+		}
+		
+		//重新绘制阴影
+		for(var i = 0; i < oldPoint.length; i++){
+			gd.beginPath();
+			gd.moveTo(oldPoint[i][0].x,oldPoint[i][0].y);
+			
+			for(var j = 1; j < N; j++){
+				gd.lineTo(oldPoint[i][j].x,oldPoint[i][j].y);
+			}
+			var opacity = i/oldPoint.length;
+			gd.strokeStyle = "rgba(255,0,0,"+opacity+")"
+			gd.closePath();
+			gd.stroke();
+		}
+		
+		
+		
+	},16);
+	
+	
+	
+	function drawPoint(p){
+		
+		gd.strokeStyle = "red";
+		gd.fillStyle = "red";
+		gd.fillRect(p.x,p.y,p.w,p.h);
+		gd.strokeRect(p.x,p.y,p.w,p.h);
+	}
+	
+	
+ 
+ 
+};
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="800" height="600"></canvas>
+</body>
+</html>
