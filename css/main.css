@@ -17,10 +17,10 @@
 .ul1 li{ color:#FFF; float:left; width:50px; height:36px; text-align:center; line-height:36px; padding:0 12px;}
 .ul1 li.active_write{ color:#06F;}
 .tab ul { width:100%; height:100%; position:relative;}
-#lf,#rt{ width:60px; height:60px; opacity:.6;}
-#lf{ position:absolute; top:320px; left:10px; z-index:1;background:url(../img/left.png) no-repeat;}
-#rt{ position:absolute; top:320px; right:10px;background:url(../img/right.png) no-repeat;}
-#radius{ position:absolute; top:640px; left:50%; z-index:10; margin-left:-32px;}
+#lf,#rt{ width:60px; height:60px; opacity:.6; margin-top:-30px;position:absolute; top:50%;}
+#lf{  left:10px; z-index:1;background:url(../img/left.png) no-repeat;}
+#rt{ right:10px;background:url(../img/right.png) no-repeat;}
+#radius{ position:absolute; bottom:10px; left:50%; z-index:10; margin-left:-32px;}
 #radius a{ display:block; width:14px; height:14px; background:#000; float:left; 
 margin-right:10px; opacity:.4;filter:alpha(opacity:40);}
 #radius a.active{ background:#fff;}
@@ -44,12 +44,9 @@ background:url(../img2/0.jpg) no-repeat;
 transform: translateZ(1px);-webkit-transform: translateZ(1px);}
 #fan .page .back{background:url(../img2/1.jpg) no-repeat; z-index:1;
 transform: scale(-1,1) translateZ(-1px);-webkit-transform: scale(-1,1) translateZ(-1px);}
-
-
-
-
+.tab{ position:relative;}
 .tab ul li{width:100%; height:100%; display:none;}
-.tab ul li img{width:100%; height:100%;}
+.tab ul li img{width:100%; height:100%; background-size:100% 100%; -webkit-background-size:100% 100%;}
 .tab ul li div.web{ margin-left:-140px; margin-top:-140px; width:280px; height:280px; background:#000; opacity:0.5; border-radius:6px; position:absolute;top:50%; left:50%;}
 .tab ul li div.web span{ display:block; width:200px; height:2px; background:green; margin:2px 40px;}
 .line{ margin-top:30px;}
@@ -60,13 +57,13 @@ transform: scale(-1,1) translateZ(-1px);-webkit-transform: scale(-1,1) translate
 .btn{ width:200px; height:36px; line-height:36px; text-align:center; border:1px solid #0F9;
  margin-top:18px; margin-left:40px;}
  .eng{ width:800px; position:absolute; left:50%; margin-left:-400px; text-align:center; font:40px bold; color:#fff; top:470px;}
- .skill{width:100%; background:url(../img/bg_hb.jpg) no-repeat;}
+ .skill{width:100%; background:url(../img/bg_hb.jpg) no-repeat; background-size:100% 100%; -webkit-background-size:100% 100%;}
  .skill .skill-box{ width:980px; height:100%; margin:0 auto;}
  
  .bar_btm{ height:2px; width:30px; background:#ccc; display:block; margin-top:4px;}
  
  .xinxi{ margin-top:68px;}
- .effect { width:100%;background:url(../img/bg_sky.jpeg) no-repeat; position:relative;}
+ .effect { width:100%;background:url(../img/bg_sky.jpeg) no-repeat; position:relative;-webkit-background-size:100% 100%; background-size:100% 100%;}
  .effect .effect-box{ width:980px; margin:0 auto; height:100%; position:relative;}
  
  .effect .show{cursor:pointer;position:absolute; top:0px; left:50%; margin-left:-30px; color:#fff;
@@ -85,7 +82,7 @@ transform: scale(-1,1) translateZ(-1px);-webkit-transform: scale(-1,1) translate
  .portrait{transition:all 1s ease; width:120px; height:120px; border-radius:50%; background:url(../img/mt.png) no-repeat; margin-right:48px;border:1px solid #ccc;}
  .portrait:hover{transform:rotate(360deg);-webkit-transform:rotate(360deg);}
  .about_box{ width:980px; margin:0 auto; -background:#ccc; height:100%; position:relative;}
- .about{ width:100%;background:url(../img/bg.png) no-repeat;}
+ .about{ width:100%;background:url(../img/bg.png) no-repeat;-webkit-background-size:100% 100%; background-size:100% 100%;}
  .about .s1{ display:block; height:42px; width:78px; border:1px solid #FF0; float:left; margin-right:24px;}
  .jx1 .s1{ margin-left:37px; margin-bottom:12px;}
 .jieshao{ padding:10px; width:360px; height:260px; border: 1px solid #ccc; border-radius:4px; margin-top:68px; }
@@ -95,7 +92,7 @@ transform: scale(-1,1) translateZ(-1px);-webkit-transform: scale(-1,1) translate
 #jieshao span{ font:24px "宋体"; color:#fff; opacity:0;filter:alpha(opacity:0);}
 .jx1,.jx2{text-align:center; line-height:42px; color:#0FF;}
 .list .eft{ background:rgba(255,255,255,0.3); border:1px solid #ccc;}
-.contact{ width:100%;background:url(../img/bg_last.jpg) no-repeat; position:relative;}
+.contact{ width:100%;background:url(../img/bg_last.jpg) no-repeat; position:relative;-webkit-background-size:100% 100%; background-size:100% 100%;}
 .contact_box{ width:980px; margin:0 auto;}
 .contact .em{ position:absolute; left:50%; top:50%; margin-left:-214px; margin-top:-180px;}
 .contact .em img{ margin-top:20px; margin-bottom:20px;}
