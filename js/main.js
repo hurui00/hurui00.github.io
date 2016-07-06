@@ -410,7 +410,19 @@ setInterval(function(){
 		
 	})();
 	
+	var oShock = document.getElementById("shock"); 
+	var aShock = oShock.getElementsByTagName("li");
+		
+		setInterval(function(){
+			
+		},30)
 	
+function Maths(m,n){
+	
+	return Math.round(Math.random()*(m-n)+n) 
+
+
+}	
 	
 	
 		//effect
