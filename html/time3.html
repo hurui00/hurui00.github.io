@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<title></title>
+<style>
+body{ background:url(images/bg.png); color:#fff; font-size:80px;}
+img{ vertical-align:middle;}
+#box{
+	width: 630px;
+	height: 120px;
+	margin: 80px auto;
+}
+.isWrite{
+	font-size: 20px;
+	color:
+}
+</style>
+<script>
+function addZero(n){
+	return n < 10 ? "0" + n : "" + n;
+}
+window.onload = function(){ 
+	 var oBox = document.getElementById("box");
+	 var aImg = oBox.getElementsByTagName("img");
+	 clock();
+	 setInterval(clock,1000);
+	 function clock(){
+		 var oDate = new Date();
+		 //现在时间戳	
+		 var nowTime = oDate.getTime();
+		 //继迎过生日时间戳
+		 var sunJiYingBirthday = new Date("2018-2-27 23:59:59").getTime();
+		 //时间差  
+		 var isTime = sunJiYingBirthday - nowTime;
+		 // var s= isTime/1000;
+		 var days = parseInt(isTime / (1000 * 60 * 60 * 24));
+	     var iH = parseInt((isTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	     var iM = parseInt((isTime % (1000 * 60 * 60)) / (1000 * 60));
+	     var iS = (isTime % (1000 * 60)) / 1000;
+		 var str =addZero(days) + addZero(iH) + addZero(iM) + addZero(iS);
+		 var str1 = str.split(".")[0];
+		 console.log(str1);
+		 document.title = "jiying"+str1;
+		 for(var i = 0; i < str1.length; i++){
+			aImg[i].src = "images/"+str1.charAt(i)+".png";
+		 }
+	 }	 
+};
+</script>
+</head>
+<body>
+<div>
+	<h3 style="text-align: center; font-size: 28px; line-height: 42px;">Someone生日倒计时</h3>
+</div>
+<div id="box">
+	<img src="images/0.png"/>
+	<img src="images/0.png"/>
+	<img src="images/0.png"/>
+	<span class="isWrite" style="color:#4285f4;">天</span>
+	<img src="images/0.png"/>
+	<img src="images/0.png"/>
+	<span class="isWrite" style="color:#ea4335;">小时</span>
+	<img src="images/0.png"/>
+	<img src="images/0.png"/>
+	<span class="isWrite" style="color:#fbbc05;">分钟</span>
+	<img src="images/0.png"/>
+	<img src="images/0.png"/>
+	<span class="isWrite" style="color:#34a853;">秒</span>
+</div>
+</body>
+</html>
