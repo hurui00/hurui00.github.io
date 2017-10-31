@@ -15,8 +15,7 @@ background:url(img/0.jpg) no-repeat; margin:150px auto;}
 window.onload=function(){
 	var oDiv = document.getElementById('div1');
 	var R = 4 ;
-	var C=  8;
-	
+	var C=  8;	
 	for(var r=0; r<R; r++){
 		for(var c=0; c<C; c++){
 			var oSpan = document.createElement("span");
@@ -25,7 +24,7 @@ window.onload=function(){
 			oSpan.style.height= oDiv.offsetHeight/R +"px";
 			oSpan.style.left= oSpan.offsetWidth*c +"px";
 			oSpan.style.top= oSpan.offsetHeight*r +"px";
-		oSpan.style.backgroundPosition=-oSpan.offsetLeft+"px -"+oSpan.offsetTop+"px";
+			oSpan.style.backgroundPosition=-oSpan.offsetLeft+"px -"+oSpan.offsetTop+"px";
 		}
 	}
 	var aSpan = oDiv.children;

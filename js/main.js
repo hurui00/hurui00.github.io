@@ -7,7 +7,7 @@ $(function(){function getByClass(oParent,sClass){
 		var result = [];
 		var aEle = oParent.getElementsByTagName("*");
 		for(var i = 0; i < aEle.length; i++){
-			
+
 			var _aTmp = aEle[i].className.split(" ");
 			
 			if(findInArr(_aTmp,sClass)){
@@ -17,7 +17,6 @@ $(function(){function getByClass(oParent,sClass){
 		return result;
 	}
 }
-
 function findInArr(arr,n){
 	for(var i = 0; i < arr.length; i++){
 		if(arr[i] == n){
@@ -26,11 +25,9 @@ function findInArr(arr,n){
 	}
 	return false;
 }
-
 function getPos(obj){
 	var l=0;
-	var t=0;
-	    
+	var t=0;   
 	while(obj){
 		l+=obj.offsetLeft;	
 		t+=obj.offsetTop;
@@ -119,7 +116,6 @@ function moveScroll(iTarget,time){
 			speed *= 0.7;
 			left += speed;
 			obj.style.left = Math.round(left) + "px"; 
-			
 			//if(obj.offsetLeft == iTarget){
 			if(obj.offsetLeft == iTarget && Math.abs(speed) < 1){
 				clearInterval(obj.timer);
@@ -159,10 +155,8 @@ function moveScroll(iTarget,time){
 	};
 	//下一个
 	oNext.onclick = next;
-
 	function next(){
 		iNow++;
-		
 		if(iNow == aBtn.length){
 			iNow = 0;
 		}
@@ -191,7 +185,6 @@ function moveScroll(iTarget,time){
 	for(var i = 0; i < aLiSk.length; i++){
 		lagou(aLiSk[i]);
 	}
-	
 	function getDir(oEvent,obj){
 		var x1 = getPos(obj).left + obj.offsetWidth/2;
 		var y1 = getPos(obj).top + obj.offsetHeight/2;
@@ -234,12 +227,10 @@ function moveScroll(iTarget,time){
 			}
 			moveRuning(oSpan,{left:0,top:0});
 		};
-		
 		oDiv.onmouseout = function(ev){
 			var oEvent = ev || event;
 			var n = getDir(oEvent,this);
 			var oSpan = this.children[0];
-			
 			var oTo = oEvent.toElement || oEvent.relatedTarget;
 			if(oDiv.contains(oTo)){
 				return;
@@ -359,12 +350,10 @@ function changeXY(obj){
 })();
 //介绍
 (function(){
-   var str="性 格 内 敛 - - - - - - - - , 做 事 专 注 认 真 , - - - - - - - - 责 任 心 强 , - - - - - - - - 追 求 极 限 技 术 , - - - - - - - - 突 破 自 我 。 。 。";
-   var str1="欢 迎 来 到 我 的 网 站"
+    var str="性 格 内 敛 - - - - - - - - , 做 事 专 注 认 真 , - - - - - - - - 责 任 心 强 , - - - - - - - - 追 求 极 限 技 术 , - - - - - - - - 突 破 自 我 。 。 。";
+    var str1="欢 迎 来 到 我 的 网 站"
    	var oJs=document.getElementById('jieshao')
    	var oWr=document.getElementById('wr')
-	
-	
 	for(var i=0;i<str.length;i++){
 		var oSpan = document.createElement("span");
 		oSpan.innerHTML=str.charAt(i);
@@ -372,7 +361,7 @@ function changeXY(obj){
 	}
 	var aSpan=oJs.getElementsByTagName("span")
 	var i=0;
-	 var timerWrite=setInterval(function(){
+	var timerWrite=setInterval(function(){
 		moveRuning(aSpan[i],{opacity:1})		
 		i++;
 		if(i==str.length){
@@ -380,15 +369,12 @@ function changeXY(obj){
 		}
 		},120);
 	})();
-	
 	(function(){
-		
 	var oDiv = document.getElementById("fan");
 	var oPage  = oDiv.querySelector(".page");
 	var oFront = oDiv.querySelector(".front");
 	var oBack  = oDiv.querySelector(".back");
 	var oPage2 = oDiv.querySelector(".page2");
-	
 	var iNow = 0;
 setInterval(function(){
 		iNow++;
@@ -400,32 +386,19 @@ setInterval(function(){
 	oPage.addEventListener("transitionend",function(){
 		oPage.style.transition = "none";
 		oPage.style.transform = "perspective(800px) rotateY(0deg)";
-		
 		oDiv.style.backgroundImage = "url(img2/"+iNow%3+".jpg)";
 		oFront.style.backgroundImage = "url(img2/"+iNow%3+".jpg)";
 		oBack.style.backgroundImage = "url(img2/"+(iNow+1)%3+".jpg)";
-		oPage2.style.backgroundImage = "url(img2/"+(iNow+1)%3+".jpg)";
-		
+		oPage2.style.backgroundImage = "url(img2/"+(iNow+1)%3+".jpg)";	
 	},false);
-		
 	})();
-	
 	var oShock = document.getElementById("shock"); 
 	var aShock = oShock.getElementsByTagName("li");
-		
 		setInterval(function(){
-			
 		},30)
-	
-function Maths(m,n){
-	
-	return Math.round(Math.random()*(m-n)+n) 
-
-
-}	
-	
-	
+	function Maths(m,n){
+		return Math.round(Math.random()*(m-n)+n) 
+	}	
 		//effect
-
 }
 });

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="author" content="" />
-<meta name="copyright" content="" />
+<meta name="copyright" content=""/>
 <title></title>
 <style>
-body{ background:url(images/bg.png); color:#fff; font-size:80px;}
+body{ background:url(images/bg.png) no-repeat; color:#fff; font-size:80px;}
 img{ vertical-align:middle;}
 #box{
 	width: 630px;
@@ -33,7 +33,7 @@ window.onload = function(){
 		 //继迎过生日时间戳
 		 var sunJiYingBirthday = new Date("2018-2-27 23:59:59").getTime();
 		 //时间差  
-		 var isTime = sunJiYingBirthday - nowTime;
+		 var isTime = sunJiYingBirthDay - nowTime;
 		 // var s= isTime/1000;
 		 var days = parseInt(isTime / (1000 * 60 * 60 * 24));
 	     var iH = parseInt((isTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
